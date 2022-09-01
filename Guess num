@@ -1,0 +1,83 @@
+from random import randint
+import calendar
+Year=int(input())
+month=int(input())
+date=int(input())
+print(calendar.month(Year,month,date))
+#count=0:
+#while True:
+    #if
+    user_inp = input('Enter space separate ints: ')
+
+
+inp = [int(i) for i in user_inp.split()]
+
+def int_lis():
+    int_list= [int(i) for i in user_inp.split()]
+    print('int_list : ',int_list) #split Method
+int_lis()
+
+
+def sorted_list():
+    sorted_lists=sorted(inp)
+    print('sorted_list :',sorted_lists) #sorted Method..> we can use sort() also
+sorted_list()
+
+
+def lensum():
+    temp_lis = inp.copy()
+    a= input('for count a value enter that value:')
+    print(temp_lis.count(int(a)))
+    a=input('for length type l: ')
+    print(len(temp_lis))
+    a= input('for sum enter s: ')
+    print(sum(temp_lis))
+    a= input('for min value min: ')
+    print(min(temp_lis))
+    a=input('for max value max: ')
+    print(max(temp_lis))
+lensum()
+
+
+def adding():
+    temp_list= inp.copy() #for copying list
+    a= input("Enter a single int what you want to add : ")
+    temp_list.append(int(a))
+    print(temp_list) #adding single value
+    b = input('Enter space separate ints for adding : ')
+    int_b= [int(i) for i in b.split()]
+    #temp_list.append(int_b)  #for adding list into list
+    #print(temp_list)
+    temp_list.extend(int_b) #adding multiple values
+    print(temp_list)
+
+    #we can add a value which position we want add using insert method
+adding()
+
+def removing():
+    print(inp)
+    temp_lis= inp.copy()
+
+    a= input('Enter for remove last value from  list :' )
+
+    temp_lis.pop()
+    print(temp_lis)
+    a= input('for remove wanted value type value: ')
+
+    temp_lis.remove(int(a))
+    print(temp_lis)
+    a = input('Enter for clear all list c')
+
+    temp_lis.clear()
+    print(temp_lis)
+
+removing()
+print(inp)
+def accessing():
+    temp = inp.copy()
+    a= int(input('Enter a int for accessing that index'))
+    print(temp[a])
+
+accessing()
+
+

@@ -1,0 +1,56 @@
+def list_operations(n,list_methods,m):
+    if list_methods=="append":
+        m=[]
+        for i in range(1,n+1):
+            m.append(i)
+        return m
+    elif list_methods=="count":
+        count=0
+        for i in range(n):
+            count+=1
+        return count
+    elif list_methods=="extend":
+        s = n.extend(m)
+        return s
+    elif list_methods=="insert":
+        list_n=n.insert(4,5,7)
+        return list_n
+    elif list_methods=="pop":
+        list_pop=n.pop()
+        return list_pop
+    elif list_methods=="clear":
+        list_clear=n.clear()
+        return list_clear
+    elif list_methods=="remove":
+        list_remove=n.remove(4)
+        return list_remove
+    elif list_methods=="index":
+        list_index=n.index(5)
+        return list_index
+    elif list_methods=="count":
+        list_count=n.count(1)
+        return list_count
+    elif list_methods=="sort":
+        list_sort=n.sort()
+        return list_sort
+    elif list_methods=="sorted":
+        list_sorted=sorted(n)
+        return list_sorted
+    elif list_methods=="reverse":
+        list_rev=sorted(n,reverse=True)
+        return list_rev
+    elif list_methods=="copy":
+        list_copy=n.copy()
+        return list_copy
+
+
+
+
+n=list(input().split())
+m=list(input().split())
+print("*append","*count","*copy","*reverse","*sorted","*sort","*index","*remove","*clear","*pop","*extend","*insert")
+while True:
+    list_methods=input()
+    if list_dict_operations=={"default":list_operations(n,list_methods,m)}:
+        list_dict_operations["default"]
+#l=list_methods(n,m)

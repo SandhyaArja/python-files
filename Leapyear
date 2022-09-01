@@ -1,0 +1,27 @@
+#leapyear
+def findtheleapyear():
+    if(year%4==0 and year%100==0):
+        print(year,"given year is leapyear")
+    elif (year%400==0):
+        print(year,"given year is a leapeyear")
+    else:
+        for i in range(year+1,year+4):
+            if(i%4==0 and i%100==0):
+                print(i,"neat year")
+                break
+            elif (i%400==0):
+                print(i,"year is next year")
+                break
+
+year =int(input())
+findtheleapyear()
+
+#check the given year is leapyear or not
+year=int(input())
+if year%4==0 and year%400:
+    print("Leapyear")
+elif year%100==0 or year%400!=0:
+    print("It's not a leapyear")
+
+
+
