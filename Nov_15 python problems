@@ -1,0 +1,120 @@
+Transposing rows and Cols def get_transpose_of_matrix(matrix, m, n):
+    # Complete this function
+    transpose_matrix=[]
+    for i in range(n):
+        row=[]
+        for j in range(m):
+            row.append(matrix[j][i])
+        transpose_matrix.append(row)        
+    return transpose_matrix
+       
+def convert_string_to_int(list_a):
+    new_list = []
+    for item in list_a:
+        num = int(item)
+        new_list.append(num)
+    return new_list
+
+
+m, n = input().split()
+m, n = int(m), int(n)
+num_list = []
+
+for i in range(m):
+    list_a = input().split()
+    list_a = convert_string_to_int(list_a)
+    num_list.append(list_a)
+
+# Call the get_transpose_of_matrix function
+transpose_matrix=get_transpose_of_matrix(num_list,m,n)
+for row in transpose_matrix:
+     print(row)
+
+
+2.Maximum Diff between Two elements in an array 
+def maximum_diff(N,M):
+    # By using the Absolute 
+    min_N=min(N)
+    max_N=max(N)
+    ans =abs(max_N-min_N)
+    return ans
+    # By using the for loop 
+    # min_el=min(N)
+    # max_el=max(N) 
+    # for i in range(1,M):
+    #     return (max_el-min_el)
+        
+N=list(map(int,input().split(",")))
+M=len(N)
+print(maximum_diff(N,M))
+
+
+3.Maximizing XOR 
+def maximizingXor(l, r):
+    # Write your code here
+    return l^r
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    l = int(input().strip())
+
+    r = int(input().strip())
+
+    result = maximizingXor(l, r)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+  
+  
+  4.A Very Big Sum
+  def aVeryBigSum(ar):
+    # Write your code here
+    sum =0 
+    for i in ar:
+        sum+=i 
+    return sum 
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    ar_count = int(input().strip())
+
+    ar = list(map(int, input().rstrip().split()))
+
+    result = aVeryBigSum(ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+    
+    
+    5.Two Rooks 
+   T=int(input())
+   for i in range(T):
+    X1,Y1,X2,Y2=map(int,input().split())
+    if (X1==X2 or Y1==Y2):
+        print("Yes")
+    else:
+        print("No")
+        
+ 6.Can You Eat It 
+     T=int(input())
+     for i in range(T):
+    N,K=map(int,input().split())
+    if N%K!=0:
+        print(-1)
+    else:
+        print(N//K)
+7.Check Subset 
+T=int(input())
+for i in range(T):
+    a =input().split()
+    set_a=set(input().split())
+
+    b =input().split()
+    set_b=set(input().split())
+
+    print(set_a.issubset(set_b))
+    
